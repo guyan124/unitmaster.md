@@ -8,5 +8,14 @@
 
 
 <template>
-    <ContentRenderer v-if="page" :value="page"></ContentRenderer>
+    <UPage>
+        <UPageHeader></UPageHeader>
+        <UPageBody>
+          <ContentRenderer v-if="page" :value="page"></ContentRenderer>
+        </UPageBody>
+         <template #right>
+            <h1>TOC</h1>
+         </template>
+    </UPage>
+   
 </template>
