@@ -1,6 +1,16 @@
-<template>
+<!-- <template>
     <NuxtLayout>
        <NuxtPage></NuxtPage>
     </NuxtLayout>    
-</template>
+</template> -->
 
+<script setup lang="ts">
+
+console.log("start:")
+</script>
+
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
