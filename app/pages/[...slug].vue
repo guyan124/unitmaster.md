@@ -29,7 +29,6 @@
 
     <template #right>
       <UPageCard>
-        <pre>{{ page.body.toc }}</pre>
         <UContentToc :links="page.body.toc?.links"/>
       </UPageCard>
     </template>
