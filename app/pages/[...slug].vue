@@ -1,32 +1,40 @@
-
-<script lang="ts"   setup>
-  const route = useRoute();
-  const { data: page } = await useAsyncData(route.path, () => {
-    return queryCollection('content').path(route.path).first()
+<script setup lang="ts">
+  definePageMeta({
+    layout: 'default'
   })
+
+  const route = useRoute();
+
+  const { data: page } = await useAsyncData(route.path, ()=> {
+    return queryCollection('content').path(route.path).first();
+  })
+
+  const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+  return queryCollectionItemSurroundings('content', route.path)
+})
 </script>
+
+
 <template>
-    <UPage>
-        <UPageHeader></UPageHeader>
-        <UPageBody>
-          <div class="content-area">
-          <ContentRenderer v-if="page" :value="page"></ContentRenderer>
-          <p v-else>No content</p>
-          </div>
-        </UPageBody>
-         <template #right>
-           <div class="toc-right"> 
-            <h1>TOC</h1>
-             <ul>
-          <li><a href="#securities/fund">Securities/Fund</a></li>
-          <li><a href="#section2">Overview</a></li>
-          <li><a href="#section3">Section 3</a></li>
-        </ul>
-        </div> 
-         </template>
-    </UPage>
+  <UPage v-if="page">
+     <UPageHeader headline="Unitmaster" :title="page.title" :description="page.description" />
+    <UPageBody v-if="page.body">
+       <ContentRenderer :value="page" />
+
+       <USeparator />
+
+      <UContentSurround :surround="surround" />
+      
+    </UPageBody>
+
+    <template #right>
+      <UPageCard>
+        <pre>{{ page.body.toc }}</pre>
+        <UContentToc :links="page.body.toc?.links"/>
+      </UPageCard>
+    </template>
+    
+
    
+  </UPage>
 </template>
-
-
-

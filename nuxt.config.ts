@@ -14,6 +14,6 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/content'], 
   css: ['assets/css/main.css'],
   content: {
-   
+    
   }
 })
