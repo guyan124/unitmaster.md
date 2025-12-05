@@ -15,5 +15,10 @@ export default defineNuxtConfig({
   css: ['assets/css/main.css'],
   content: {
     
+  },
+  nitro: {
+    devProxy: {
+      host: '127.0.0.1',
+    }
   }
 })

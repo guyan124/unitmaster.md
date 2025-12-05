@@ -20,15 +20,14 @@
      <UPageHeader headline="Unitmaster" :title="page.title" :description="page.description" />
     <UPageBody v-if="page.body">
        <ContentRenderer :value="page" />
-
        <USeparator />
 
       <UContentSurround :surround="surround" />
       
     </UPageBody>
-
     <template #right>
       <UPageCard>
+     
         <UContentToc :links="page.body.toc?.links"/>
       </UPageCard>
     </template>
