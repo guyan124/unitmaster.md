@@ -11,24 +11,23 @@ Welcome to our **New Member Registration Guide**. This guide explains how to reg
 
 This page focuses on how to add a **Single Member**. Separate pages cover Joint Members and Institutional Members.
 
-1. **How to Add a New Single Member**
+### 1. **How to Add a New Single Member**
 Follow the steps below to add a new single member to the system. This is for individuals who are registering alone.
 
-> **Step 1: Access the "Add New Member"page**
+> ### **Step 1: Access the "Add New Member"page**
 1. Log into the application and click on Members in the left sidebar.
-<img>
-
+<img src="/images/add_single.png" alt="Agents sidebar" class="img-small"  width= "400px"/>
 2. Click on the Add a new member button to begin the registration process.
 <img>
 
-> **Step 2: Choosing the Member Type**
+>### **Step 2: Choosing the Member Type**
 After clicking Add a new member, a dropdown menu appears. Choose:
-<img>
+<img src="/images/btn_single.png" alt="Agents sidebar" class="img-small"  width= "400px"/>
 Single Member when the person is registering as an individual (not a joint or institutional account).
 
-> **Step 3: Filling in Personal Details**
+> ### **Step 3: Filling in Personal Details**
 Enter the basic personal details for the member:
-<img>
+![](/images/single_form.png)
 
 ```
 * Salutation Select from the dropdown (for example Mr., Mrs., Ms.).
@@ -39,9 +38,9 @@ Enter the basic personal details for the member:
 * Country of Birth Select the country.
 * Marital Status Select Single, Married, or Other.
 ```
-> **Step 4: Adding Contact Details**
+>### **Step 4: Adding Contact Details**
 Capture the contact information so that the member can be reached easily:
-<img>
+![](/images/contact_details.jpeg)
 
 ```
 * District Select the district from the list.
@@ -52,9 +51,9 @@ Capture the contact information so that the member can be reached easily:
 * Receive Statement Via Choose whether statements are sent by email or post.
 ```
 
-> **Step 5: Adding of Next Kin information**
+> ### **Step 5: Adding of Next Kin information**
 Provide details of the member's Next of Kin for emergencies and correspondence:
-<img>
+![](/images/kin.png)
 
 ```
 * Full Name Enter the full name of the next of kin.
@@ -62,9 +61,9 @@ Provide details of the member's Next of Kin for emergencies and correspondence:
 * Phone Number Enter a reachable phone number.
 ```
 
-> **Step 6: Statutory Details**
+>### **Step 6: Statutory Details**
 Answer the statutory questions used for compliance and reporting:
-<img>
+![](/images/statutory.png)
 ```
 * Is client resident? Select Yes or No.
 * Tax PIN Enter the Tax Identification Number (TIN).
@@ -72,7 +71,7 @@ Answer the statutory questions used for compliance and reporting:
 * <strong>Has Adverse Media Screening Been Done?</strong> Select Yes or No. Screening helps identify any negative media related to the client.
 ```
 
-> **Step 7: Employment Details (Conditional)**
+> ### **Step 7: Employment Details (Conditional)**
 ```
 If you selected Yes for Is client employed?, additional fields appear. Complete them as follows:
 
@@ -82,9 +81,9 @@ Employer Address / Details Provide address or contact details if required.
 If the client is not employed, these fields can be left blank or will remain hidden depending on the system setup.
 ```
 
-> **Step 8: Account Details**
+>### **Step 8: Account Details**
 Now link the member to the correct investment account:
-<img>
+![](/images/account.png)
 
 ```
 Fund Name Select the fund in which the client is investing.
@@ -93,15 +92,15 @@ Withdraw Dividends? Select Yes if dividends are paid out, or No if they are rein
 Agent Name Select the agent responsible for this account, if applicable.
 ```
 
-> **Step 9: Bank Details**
+>### **Step 9: Bank Details**
 You can either provide bank details now or skip this step:
-<img>
+![](/images/bank.png)
 ```
 Yes Enter the bank name, branch, currency, account number, and account type. These details are used for withdrawals and payments.
 No You may skip for now, but note that withdrawals will not be possible until valid bank details are captured.
 ```
 
-> **Step 10: Completing the registration**
+>### **Step 10: Completing the registration**
 
 ```
 Once all required fields are completed, click Finish to complete the registration. Any missing or incorrect fields are highlighted in red so that you can correct them before submitting.

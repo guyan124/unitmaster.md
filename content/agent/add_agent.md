@@ -3,12 +3,12 @@ title: "Agent Onboarding"
 description: "A simple and clear guide to understanding and managing agents in Unit Master."
 ---
 
-**What are Agents?**
+### What are Agents?
 In Unit Master, Agents are people who introduce clients to invest in your organisation’s funds. They help bring in new members and support client onboarding and account management.
 
 The Agents List shows all agents registered in the system. From this section, you can add new agents, update their details, or change the agent assigned to a client.
 
-1. **Agents List**
+### 1. **Agents List**
 
 ![text](/images/agent_list.png)
 
@@ -23,7 +23,7 @@ The Agents List displays all agents currently registered in Unit Master. It allo
 
 
 
-2. **Adding New Agent**
+### 2. **Adding New Agent**
 
 To add a new agent:
 ```
@@ -32,7 +32,7 @@ To add a new agent:
 <img src="/images/agents_sidebar.png" alt="Agents sidebar" class="img-small"  width= "400px"/>
 
 
-3. **Changing a client's agent**
+### 3. **Changing a client's agent**
 ```
 * Select the client from the client list.
 * Navigate to their account details.
@@ -40,7 +40,7 @@ To add a new agent:
 * Save the changes.
 ```
 
-4. **Agent Type Listing**
+### 4. **Agent Type Listing**
 Unit Master supports different types of clients, each linked to agents:
 <!-- <img src="/images/agents_sidebar.png" alt="text" width="30px" height="20px"/> -->
 
