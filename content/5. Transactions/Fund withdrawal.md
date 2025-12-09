@@ -11,14 +11,14 @@ oder:3
 
   **How to check the fund withdwawal listing**
 
->### Step 1
+>### Step One
 ```
 Go to operations menu then click on the **Fund Withdrawal** sub-menu.
 ```
 
 <img src="/images/fund1.png" alt="Agents sidebar" class="img-small" />
 
-> ### Step 2
+> ### Step Two
 ```
 A user can generate a list of withdrawals made from the fund.
 ```
