@@ -95,7 +95,7 @@ const onSearchBlur = () => {
      <template #footer>
   <div class="p-3">
     <a
-      href="https://www.youtube.com"
+      href="https://tickets.wizglobal.co.ke/logi\ "
       target="_blank"
       rel="noopener noreferrer"
       class="block"

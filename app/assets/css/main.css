@@ -48,7 +48,17 @@ body::-webkit-scrollbar-thumb {
  img.img-small {
   width: 250px;   
  
+}
+
+ img.img-small-B {
+  width: 200px;   
+ 
 }  
+ img.img-small-A {
+  width: 650px;   
+ 
+}  
+
 
 
 
