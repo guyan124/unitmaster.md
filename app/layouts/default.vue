@@ -9,7 +9,6 @@ const searchResults = ref<any[]>([])
 
 const router = useRouter()
 
-// Function to flatten ALL elements: folders AND pages
 const allItems = computed(() => {
   const root = navigation.value ?? []
   const flat: any[] = []
@@ -19,11 +18,11 @@ const allItems = computed(() => {
       flat.push({
         ...item,
         isFolder: item.children && item.children.length > 0,
-        // For folders, create a path to the first child page
+    
         effectivePath: item._path || item.path || (item.children?.[0]?._path) || '/'
       })
       
-      // Recursively explore children
+    
       if (item.children && item.children.length > 0) {
         walk(item.children)
       }
@@ -45,12 +44,12 @@ const onSearchKey = (event: KeyboardEvent) => {
 
   isSearchOpen.value = true
 
-  // Filter by title (folders AND files)
+  
   searchResults.value = allItems.value.filter((item) => {
     return item.title?.toLowerCase().includes(term)
   })
 
-  // Press Enter to go to first result
+  
   if (event.key === 'Enter' && searchResults.value[0]) {
     goToResult(searchResults.value[0])
   }
@@ -65,7 +64,7 @@ const goToResult = (item: any) => {
   isSearchOpen.value = false
   searchTerm.value = ''
   
-  // Use effective path
+  
   const targetPath = item.effectivePath || item._path || item.path || '/'
   router.push(targetPath)
 }
