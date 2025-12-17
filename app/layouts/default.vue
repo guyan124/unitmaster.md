@@ -84,14 +84,14 @@ const onSearchBlur = () => {
       class="w-64 sidebar-scroll border-r border-gray-800 pr-2"
     >
       <template #header="{ collapsed }">
-        <NuxtLink to="/introduction.md" class="flex items-center gap-2 px-3 py-3">
+        <NuxtLink to="/introduction" class="logo-link">
           <img
             v-if="!collapsed"
             src="/images/Wiz global.jpg"
             alt="Unit Master logo"
-            class="h-8 w-auto rounded-md"
+            class="h-8 w-auto rounded-md logo-image"
           />
-          <span v-if="!collapsed" class="font-semibold text-sm">
+          <span v-if="!collapsed" class="font-semibold text-sm logo-text">
             Unit Master
           </span>
         </NuxtLink>
@@ -107,7 +107,7 @@ const onSearchBlur = () => {
             rel="noopener noreferrer"
             class="block"
           >
-            <UButton block color="primary">
+            <UButton block color="primary" class="support-btn">
               Support Ticket System
             </UButton>
           </a>
@@ -115,8 +115,8 @@ const onSearchBlur = () => {
       </template>
     </UDashboardSidebar>
     
-    <UDashboardPanel class="flex flex-col flex-1 pl-4">
-      <UDashboardNavbar class="pb-3 mb-2 border-b border-gray-800">
+    <UDashboardPanel class="flex flex-col flex-1 pl-4 dashboard-panel">
+      <UDashboardNavbar class="pb-3 mb-2 border-b border-gray-800 navbar-improved">
         <template #left>
           <span class="font-semibold text-5xl tracking-tight">
             Unit Master - Documentation
@@ -124,7 +124,7 @@ const onSearchBlur = () => {
         </template>
 
         <template #right>
-          <div class="relative w-64">
+          <div class="relative w-64 search-input">
             <UInput
               v-model="searchTerm"
               icon="i-lucide-search"
@@ -137,34 +137,33 @@ const onSearchBlur = () => {
 
             <div
               v-if="isSearchOpen && searchResults.length"
-              class="absolute left-0 mt-2 w-full max-h-80 overflow-y-auto
-                    rounded-xl border border-gray-700 bg-slate-900 shadow-xl z-50"
+              class="absolute left-0 mt-2 w-full max-h-80 overflow-y-auto search-dropdown"
             >
               <button
                 v-for="item in searchResults"
                 :key="item._path || item.title"
-                class="w-full px-3 py-2 text-left text-sm hover:bg-slate-800 flex items-center gap-2"
-                :class="{ 'cursor-not-allowed opacity-60': item.isFolder }"
+                class="search-result-item w-full text-left"
+                :class="{ 'disabled': item.isFolder }"
                 @mousedown.prevent="goToResult(item)"
               >
                 <UIcon
                   v-if="item.isFolder"
                   name="i-lucide-folder"
-                  class="w-4 h-4 text-blue-400"
+                  class="result-icon result-icon-folder w-4 h-4"
                 />
                 <UIcon
                   v-else
                   name="i-lucide-file-text"
-                  class="w-4 h-4 text-gray-400"
+                  class="result-icon result-icon-file w-4 h-4"
                 />
-                <span>{{ item.title }}</span>
-                <span v-if="item.isFolder" class="text-xs text-gray-400 ml-auto">
+                <span class="result-title text-sm">{{ item.title }}</span>
+                <span v-if="item.isFolder" class="result-badge">
                   Folder
                 </span>
               </button>
             </div>
             
-            <!-- Message quand aucun résultat -->
+            <!-- Message when no results -->
             <div
               v-if="isSearchOpen && searchTerm && !searchResults.length"
               class="absolute left-0 mt-2 w-full rounded-xl border border-gray-700 bg-slate-900 shadow-xl z-50 p-4"
